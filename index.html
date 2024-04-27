@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивный веб-сайт портфолио | AnivitCode</title>
+    <link rel='stylesheet' href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">AnivitPortfolio</a>
+
+        <ul class="navvlist">
+            <li><a href='#'>Главная</a></li>
+            <li><a href='#'>Услуги</a></li>
+            <li><a href='#'>Портфолио</a></li>
+            <li><a href='#'>Навыки</a></li>
+            <li><a href='#'>Контакты</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="#" class="nav-btn">Наймите МЕНЯ!</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <section class='hero'>
+        <div class="hero-text">
+            <h6>Привет, <span>я</span></h6>
+            <h1><span>Ani</span>vit</h1>
+            <h4>Так же я <span class='input'></span></h4>
+            <p>ХАЙ! (^_^メ), я программист-анимешник, объединяю хобби и работу, что-то да выходит, показываю готовые проекты,
+                надеюсь мои канал тебе понравятся и мы всегда будем вместе </p>
+
+            <div class="hero-icons">
+                <a href="#"><i class='bx bxl-telegram'></i></a>
+                <a href="#"><i class='bx bxl-vk'></i></a>
+                <a href="#"><i class='bx bxl-youtube' ></i></a>
+            </div>
+
+            <div class="hero-btn">
+                <a href="#" class="btn">Скачать резюме</a>
+                <a href="#" class="btn1">Подробнее обо мне</a>
+            </div>
+        </div>
+
+        <div class="hero-img">
+            <img src="img/output-onlinepngtools (40).png">
+        </div>
+    </section>
+
+    <div class="scroll">
+        <a href="#"><i class='bx bx-arrow-to-bottom' ></i>Прокрутите вниз</a>
+    </div>
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script type='text/javascript'>
+        var typed = new Typed('.input',{
+            strings:['программист','программист-анимешник','дизайнер'],
+            typeSpeed: 80,
+            backSpeed: 70,
+            loop:true
+        });
+
+        let menu = document.querySelector('#menu-icon');
+        let navvlist = document.querySelector('.navvlist');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navvlist.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Embed code', sans-serif;
+}
+:root{
+    --bg-color: #1d1c1b;
+    --text-color: #fff;
+    --main-color: #ea5445;
+    --other-color: #858585;
+    --h1-font: 5rem;
+    --p-font: 1.1rem;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 32px 13%;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+    display: flex;
+}
+.logo{
+    color: var(--text-color);
+    font-size: 36px;
+    font-weight: 700;
+}
+.navvlist{
+    display: flex;
+}
+.navvlist a{
+    display: inline-flex;
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 30px;
+    transition: all .6s ease;
+}
+.navvlist a:hover{
+    color: var(--other-color);
+    transform: translateY(-6px);
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+}
+.nav-btn{
+    display: inline-block;
+    padding: 14px 35px;
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: all .6s ease;
+}
+.nav-btn:hover{
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
+#menu-icon{
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10001;
+    margin-left: 20px;
+    display: none;
+}
+section{
+    padding: 0px 13% 0px;
+}
+.hero{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+.hero-img img{
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.hero-text h1{
+    font-size: var(--h1-font);
+    line-height: 1.1;
+    font-weight: 700;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: -1px -1px 0px #000, 7px 7px 0px #000, 9px 9px 0px #00000055;
+}
+.hero-text h1 span{
+    color: var(--main-color);
+}
+.hero-text h6{
+    font-size: 22px;
+    font-weight: 600;
+}
+.hero-text h6 span{
+    color: var(--main-color);
+}
+.hero-text h4{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.hero-text p{
+    font-size: var(--p-font);
+    color: var(--other-color);
+    margin-bottom: 20px;
+    line-height: 2;
+}
+.hero-icons i{
+    display: inline-block;
+    font-size: 24px;
+    color: var(--text-color);
+    margin-right: 20px;
+    transition: all .6s ease;
+    margin-bottom: 40px;
+}
+.hero-icons i:hover{
+    transform: rotate3d(0, 0, 1, 360deg);
+    color: var(--main-color);
+}
+.hero-btn{
+    display: flex;
+    align-items: center;
+}
+.btn{
+    display: inline-block;
+    padding: 15px 30px;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    border-radius: 30px;
+    border: 2px solid var(--main-color);
+    box-shadow: 2px 2px var(--main-color);
+    transition: all .6s ease;
+    margin-right: 30px;
+}
+.btn:hover{
+    background: var(--main-color);
+    color: var(--text-color);
+}
+.btn1{
+    display: inline-block;
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    letter-spacing: .05em;
+    transition: all .3s ease;
+}
+.btn1:hover{
+    border-bottom: 2px solid var(--text-color);
+}
+.scroll{
+    position: absolute;
+    top: 92%;
+    left: 47%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+.scroll a{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-color);
+    letter-spacing: .05em;
+    transition: all .6s ease;
+}
+.scroll i{
+    font-size: 16px;
+    margin-right: 9px;
+}
+.scroll a:hover{
+    transform: translateY(-7px);
+    color: var(--main-color);
+}
+
+@media(max-width: 1800px) {
+    header{
+        padding: 22px 6%;
+    }
+    section{
+        padding: 40px 6% 50px;
+    }
+}
+@media(max-width: 1510px){
+    :root{
+        --h1-font: 4.2rem;
+        --p-font: 1rem;
+    }
+    .hero-img img{
+         max-width: 540px;
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+    }
+}
+@media(max-width: 1330px){
+    header{
+        padding: 22px 4%;
+    }
+    section{
+        padding: 40px 4% 50px;
+    }
+    :root{
+        --h1-font: 4rem;
+    }
+    .hero-img img{
+        max-width: 500px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+@media(max-width: 1200px){
+    #menu-icon{
+        display: block;
+    }
+    .navvlist{
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(30px);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 150px;
+        transition: all .6s ease;
+    }
+    .navvlist a{
+        display: block;
+        padding: 0;
+        margin: 0px 0px 30px 0px;
+        font-size: 1.7rem;
+    }
+    .navvlist a:hover{
+        color: var(--main-color);
+    }
+    .navvlist.open{
+        right: 0;
+    }
+    header{
+        background: #22211f;
+        padding: 10px 4%;
+    }
+    .logo{
+        font-size: 25px;
+    }
+    .nav-btn{
+        padding: 9px 20px;
+        font-size: 14px;
+    }
+    .scroll{
+        display: none;
+    }
+    .hero{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        height: auto;
+    }
+    .hero-text{
+        text-align: center;
+        order: 2;
+        width: 100%;
+    }
+    .hero-text p{
+        width: 100%;
+    }
+    .hero-img{
+        margin: auto;
+    }
+    .hero-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media(max-width: 1200px){
+    :root{
+        --h1-fotn: 2.7rem;
+    }
+    .hero-text h4{
+        font-size: 23px;
+    }
+}
